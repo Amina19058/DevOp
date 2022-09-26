@@ -3,8 +3,8 @@ name: Python App
 
 on: push
 
-permissions:
-  contents: read
+# permissions:
+#   contents: read
 
 defaults:
   run:
@@ -68,7 +68,7 @@ jobs:
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
         with:
-          sarif_file: app_python/snyk.sarif
+          sarif_file: DevOp/snyk.sarif
 
   deploy:
     runs-on: ubuntu-latest
